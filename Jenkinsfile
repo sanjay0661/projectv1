@@ -4,14 +4,15 @@ pipeline {
     environment {
         // SonarQube configuration
         SONARQUBE_SERVER = 'SonarQube' // The name of your SonarQube server configured in Jenkins
-        GITHUB_REPO = 'https://github.com/sanjay0661/projectv1.git' // Your GitHub repository URL
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Checkout code from GitHub
-                git branch: 'main', url: GITHUB_REPO
+                // Checkout code from GitHub using credentials
+                git branch: 'main', 
+                    credentialsId: 'github-pat', // Replace with your Jenkins credential ID
+                    url: 'https://github.com/sanjay0661/projectv1.git'
             }
         }
 
