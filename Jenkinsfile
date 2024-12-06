@@ -11,7 +11,7 @@ pipeline {
             steps {
                 // Checkout code from GitHub using credentials
                 git branch: 'main', 
-                    credentialsId: 'git-cerdential', // Replace with your Jenkins credential ID
+                    credentialsId: 'git-credential-v1', // Replace with your Jenkins credential ID
                     url: 'https://github.com/sanjay0661/projectv1.git'
             }
         }
