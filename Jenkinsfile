@@ -4,7 +4,7 @@ pipeline {
     environment {
         // SonarQube configuration
         SONARQUBE_SERVER = 'SonarQube' // The name of your SonarQube server configured in Jenkins
-        GITHUB_REPO = 'https://github.com/your-user/your-repo.git' // Your GitHub repository URL
+        GITHUB_REPO = 'https://github.com/sanjay0661/projectv1.git' // Your GitHub repository URL
     }
 
     stages {
